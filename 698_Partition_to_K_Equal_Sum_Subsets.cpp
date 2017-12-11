@@ -34,7 +34,6 @@ public:
         if(sum % k != 0){
             return false;
         }
-
         sum = sum / k;
         vector<int> visited(n, 0);
         return backtrack(nums, visited, 0, sum, 0, k, 0);
