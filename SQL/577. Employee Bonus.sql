@@ -1,5 +1,7 @@
 /*
-577.Employee Bonus
+
+577. Employee Bonus -- Easy
+https://leetcode.com/problems/employee-bonus/
 
 Select all employee's name and bonus whose bonus is < 1000.
 
@@ -14,7 +16,6 @@ Table:Employee
 |   4   | Thomas |  3        | 4000   |
 +-------+--------+-----------+--------+
 empId is the primary key column for this table.
-
 Table: Bonus
 
 +-------+-------+
@@ -24,7 +25,6 @@ Table: Bonus
 | 4     | 2000  |
 +-------+-------+
 empId is the primary key column for this table.
-
 Example ouput:
 
 +-------+-------+
@@ -37,8 +37,10 @@ Example ouput:
 
 */
 
+# Write your MySQL query statement below
 SELECT name, bonus 
-FROM Employee
-LEFT JOIN Bonus ON (Employee.empId = Bonus.empId) 
-WHERE bonus is null or bonus < 1000
+FROM Employee 
+LEFT JOIN Bonus ON (Employee.empId=Bonus.empId) 
+WHERE bonus<1000 OR bonus IS NULL
 ;
+

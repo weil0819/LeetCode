@@ -1,7 +1,9 @@
 /*
-569. Median Employee Salary
-https://www.leetfree.com/problems/median-employee-salary.html
 
+569. Median Employee Salary -- Hard
+https://leetcode.com/problems/median-employee-salary/
+
+SQL Schema
 The Employee table holds all employees. The employee table has three columns: Employee Id, Company Name, and Salary.
 
 +-----+------------+--------+
@@ -25,7 +27,6 @@ The Employee table holds all employees. The employee table has three columns: Em
 |16   | C          | 2652   |
 |17   | C          | 65     |
 +-----+------------+--------+
-
 Write a SQL query to find the median salary of each company. Bonus points if you can solve it without using any built-in SQL functions.
 
 +-----+------------+--------+
@@ -39,4 +40,6 @@ Write a SQL query to find the median salary of each company. Bonus points if you
 +-----+------------+--------+
 
 */
+
+
 

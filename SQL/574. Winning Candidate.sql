@@ -1,7 +1,9 @@
 /*
-574.Winning Candidate
-https://www.leetfree.com/problems/winning-candidate.html
 
+574. Winning Candidate -- Medium
+https://leetcode.com/problems/winning-candidate/
+
+SQL Schema
 Table: Candidate
 
 +-----+---------+
@@ -13,7 +15,6 @@ Table: Candidate
 | 4   | D       |
 | 5   | E       |
 +-----+---------+  
-
 Table: Vote
 
 +-----+--------------+
@@ -27,7 +28,6 @@ Table: Vote
 +-----+--------------+
 id is the auto-increment primary key,
 CandidateId is the id appeared in Candidate table.
-
 Write a sql to find the name of the winning candidate, the above example will return the winner B.
 
 +------+
@@ -35,23 +35,9 @@ Write a sql to find the name of the winning candidate, the above example will re
 +------+
 | B    |
 +------+
-
 Notes:
+
 You may assume there is no tie, in other words there will be at most one winning candidate.
+
 */
 
-# return winner 
-select CandidateId from Vote
-group by CandidateId
-order by count(*) DESC
-limit 1;
-
-
-SELECT Candidate.Name 
-FROM Candidate 
-	JOIN (SELECT CandidateId 
-		  FROM Vote 
-		  GROUP BY CandidateId 
-		  ORDER BY COUNT(*) DESC 
-		  LIMIT 1) AS winner ON (winner.CandidateId = Candidate.id)
-;

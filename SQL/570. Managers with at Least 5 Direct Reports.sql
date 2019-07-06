@@ -1,7 +1,9 @@
 /*
-570. Managers with at Least 5 Direct Reports
-https://www.leetfree.com/problems/managers-with-at-least-5-direct-reports.html
 
+570. Managers with at Least 5 Direct Reports -- Medium
+https://leetcode.com/problems/managers-with-at-least-5-direct-reports/
+
+SQL Schema
 The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
 
 +------+----------+-----------+----------+
@@ -14,7 +16,6 @@ The Employee table holds all employees including their managers. Every employee 
 |105   |Anne 	  |A 	      |101       |
 |106   |Ron 	  |B 	      |101       |
 +------+----------+-----------+----------+
-
 Given the Employee table, write a SQL query that finds out managers with at least 5 direct report. For the above table, your SQL query should return:
 
 +-------+
@@ -22,22 +23,18 @@ Given the Employee table, write a SQL query that finds out managers with at leas
 +-------+
 | John  |
 +-------+
-
 Note:
 No one would report to himself.
 
 */
 
-SELECT E1.Name 
-FROM Employee E1
-WHERE E1.Id in (SELECT E2.ManagerId 
-				FROM Employee E2 
-				GROUP BY E2.ManagerId 
-				HAVAING COUNT(*) >= 5)
-;
+# Write your MySQL query statement below
+SELECT Name 
+FROM Employee
+WHERE Id IN (
+    SELECT ManagerId 
+    FROM Employee
+    GROUP BY ManagerId
+    HAVING COUNT(*)>=5
+)
 
-SELECT e2.Name  
-FROM Employee e1, Employee e2  
-WHERE e1.ManagerId = e2.Id  
-GROUP BY e1.ManagerId  
-HAVAING COUNT(*) >= 5;  

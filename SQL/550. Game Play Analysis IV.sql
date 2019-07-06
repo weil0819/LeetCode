@@ -44,7 +44,24 @@ Only the player with id 1 logged back in after the first day he had logged in so
 
 */
 
+# Write your MySQL query statement below
+# Method-I:
+SELECT ROUND(SUM(CASE WHEN A1.logged_in+1=A2.event_date THEN 1 ELSE 0 END)/COUNT(DISTINCT A1.player_id),2) AS fraction 
+FROM (
+    SELECT player_id, MIN(event_date) AS logged_in 
+    FROM Activity 
+    GROUP BY player_id 
+) AS A1
+JOIN Activity A2 ON(A1.player_id=A2.player_id)
+;
 
+# Method-II:
+SELECT ROUND(COUNT(A2.player_id)/COUNT(A1.player_id),2) AS fraction
+FROM
+(SELECT player_id, MIN(event_date) AS first_login FROM Activity GROUP BY player_id) A1 
+LEFT JOIN Activity A2
+ON A1.player_id = A2.player_id AND A1.first_login+1 = A2.event_date
+;
 
 
 
