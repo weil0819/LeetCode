@@ -41,3 +41,30 @@ You may assume there is no tie, in other words there will be at most one winning
 
 */
 
+# Write your MySQL query statement below
+# SELECT Name 
+# FROM Candidate 
+# WHERE id = (
+#     SELECT CandidateId 
+#     FROM Vote 
+#     GROUP BY CandidateId 
+#     HAVING COUNT(*)=(
+#         SELECT COUNT(*) AS cnt
+#         FROM Vote 
+#         GROUP BY CandidateId
+#         ORDER BY cnt DESC
+#         LIMIT 1
+#     )
+# );
+
+SELECT Name 
+FROM Candidate 
+WHERE id = (
+    SELECT CandidateId 
+    FROM Vote 
+    GROUP BY CandidateId 
+    ORDER BY COUNT(*) DESC
+    LIMIT 1
+);
+
+

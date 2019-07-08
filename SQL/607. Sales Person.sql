@@ -1,6 +1,7 @@
 /*
-607. Sales Person
-https://www.leetfree.com/problems/sales-person.html
+
+607. Sales Person -- Easy
+https://leetcode.com/problems/sales-person/
 
 Description
 
@@ -22,7 +23,6 @@ Table: salesperson
 |   5      | Alex | 50000  |     10          | 2/3/2007  |
 +----------+------+--------+-----------------+-----------+
 The table salesperson holds the salesperson information. Every salesperson has a sales_id and a name.
-
 Table: company
 
 +---------+--------+------------+
@@ -34,18 +34,16 @@ Table: company
 |   4     | GREEN  |   Austin   |
 +---------+--------+------------+
 The table company holds the company information. Every company has a com_id and a name.
-
 Table: orders
 
++----------+------------+---------+----------+--------+
+| order_id | order_date | com_id  | sales_id | amount |
++----------+------------+---------+----------+--------+
+| 1        |   1/1/2014 |    3    |    4     | 100000 |
+| 2        |   2/1/2014 |    4    |    5     | 5000   |
+| 3        |   3/1/2014 |    1    |    1     | 50000  |
+| 4        |   4/1/2014 |    1    |    4     | 25000  |
 +----------+----------+---------+----------+--------+
-| order_id |  date    | com_id  | sales_id | amount |
-+----------+----------+---------+----------+--------+
-| 1        | 1/1/2014 |    3    |    4     | 100000 |
-| 2        | 2/1/2014 |    4    |    5     | 5000   |
-| 3        | 3/1/2014 |    1    |    1     | 50000  |
-| 4        | 4/1/2014 |    1    |    4     | 25000  |
-+----------+----------+---------+----------+--------+
-
 The table orders holds the sales record information, salesperson and customer company are represented by sales_id and com_id.
 output
 
@@ -56,32 +54,20 @@ output
 | Mark | 
 | Alex |
 +------+
-
 Explanation
 
 According to order '3' and '4' in table orders, it is easy to tell only salesperson 'John' and 'Alex' have sales to company 'RED',
 so we need to output all the other names in table salesperson.
+
 */
 
-# return all sales_id from order which is from "RED"
-select sales_id 
-from order 
-	left join company on (company.com_id = order.com_id)
-where name = 'RED'
-;
+# Write your MySQL query statement below
+SELECT name 
+FROM salesperson
+WHERE sales_id NOT IN (
+    SELECT S.sales_id 
+    FROM salesperson S, company C, orders O
+    WHERE S.sales_id=O.sales_id AND C.com_id=O.com_id 
+    AND C.name='RED'
+);
 
-# return not in above
-SELECT
-    s.name
-FROM
-    salesperson s
-WHERE
-    s.sales_id NOT IN (SELECT  # not in
-            o.sales_id
-        FROM
-            orders o
-                LEFT JOIN
-            company c ON o.com_id = c.com_id
-        WHERE
-            c.name = 'RED')
-;

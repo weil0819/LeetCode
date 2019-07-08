@@ -52,3 +52,14 @@ How about the cumulative accept rate for every day?
 
 */
 
+# Write your MySQL query statement below
+# KEY FUNCTION -- "IFNULL(expression, alt_value)" 
+SELECT ROUND(
+    IFNULL(
+        COUNT(DISTINCT requester_id,accepter_id) / COUNT(DISTINCT sender_id,send_to_id),
+        0
+    ),
+    2) AS accept_rate 
+FROM friend_request, request_accepted 
+;
+
