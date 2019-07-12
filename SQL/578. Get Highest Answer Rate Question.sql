@@ -34,6 +34,15 @@ Note: The highest answer rate meaning is: answer number's ratio in show number i
 
 */
 
-
+# Write your MySQL query statement below
+SELECT question_id AS survey_log 
+FROM (
+    SELECT SUM(CASE WHEN action='answer' THEN 1 ELSE 0 END)/SUM(CASE WHEN action='show' THEN 1 ELSE 0 END) AS rate, question_id 
+    FROM survey_log 
+    GROUP BY question_id 
+    ORDER BY rate DESC 
+    LIMIT 1
+) AS tmp
+;
 
 

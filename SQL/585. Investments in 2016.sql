@@ -1,8 +1,10 @@
 /*
-585. Investments in 2016
-https://www.leetfree.com/problems/investments-in-2016.html
 
-Write a query to print the sum of all total investment values in 2016 (TIV_2016), to a scale of 2 decimal places, for all policy holders who meet the following criteria:
+585. Investments in 2016 -- Medium
+https://leetcode.com/problems/investments-in-2016/
+
+Write a query to print the sum of all total investment values in 2016 (TIV_2016), to a scale of 2 decimal places, 
+for all policy holders who meet the following criteria:
 
 Have the same TIV_2015 value as one or more other policyholders.
 Are not located in the same city as any other policyholder (i.e.: the (latitude, longitude) attribute pairs must be unique).
@@ -43,4 +45,7 @@ And its location is the same with the third record, which makes the third record
 So, the result is the sum of TIV_2016 of the first and last record, which is 45.
 
 */
+
+
+
 

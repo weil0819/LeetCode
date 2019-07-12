@@ -1,6 +1,7 @@
 /*
-608. Tree Node
-https://www.leetfree.com/problems/tree-node.html
+
+608. Tree Node -- Medium
+https://leetcode.com/problems/tree-node/
 
 Given a table tree, id is identifier of the tree node and p_id is its parent node's id.
 
@@ -17,8 +18,12 @@ Each node in the tree can be one of three types:
 Leaf: if the node is a leaf node.
 Root: if the node is the root of the tree.
 Inner: If the node is neither a leaf node nor a root node.
+ 
 
-Write a query to print the node id and the type of the node. Sort your output by the node id. The result for the above sample is:
+Write a query to print the node id and the type of the node. Sort your output by the node id. 
+The result for the above sample is:
+ 
+
 +----+------+
 | id | Type |
 +----+------+
@@ -28,35 +33,39 @@ Write a query to print the node id and the type of the node. Sort your output by
 | 4  | Leaf |
 | 5  | Leaf |
 +----+------+
+ 
 
 Explanation
+
+ 
 
 Node '1' is root node, because its parent node is NULL and it has child node '2' and '3'.
 Node '2' is inner node, because it has parent node '1' and child node '4' and '5'.
 Node '3', '4' and '5' is Leaf node, because they have parent node and they don't have child node.
 
 And here is the image of the sample tree as below:
+ 
+
 			  1
 			/   \
-          2       3
-        /   \
-      4       5
-
+                      2       3
+                    /   \
+                  4       5
 Note
 
 If there is only one node on the tree, you only need to output its root attributes.
 
-*/
+*/	
+
+# Write your MySQL query statement below
 
 # method-I: case ... when ...
-select id, case 
-				when id = (select id from tree where p_id is null) then "Root"
-				when id in (select p_id from tree) then "Inner"
-				else "Leaf"
-			end as Type
-from tree 
-order by id
-;
+SELECT id, (CASE WHEN id=(SELECT id FROM tree WHERE p_id IS NULL) THEN 'Root'
+            WHEN id IN (SELECT p_id FROM tree) THEN 'Inner'
+            ELSE 'Leaf' END) AS Type 
+FROM tree
+ORDER BY id;
+
 
 # method-II: union
 SELECT
@@ -96,4 +105,6 @@ WHERE
             p_id IS NOT NULL)
         AND p_id IS NOT NULL
 ORDER BY id;
+
+
 

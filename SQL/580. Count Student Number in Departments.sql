@@ -1,11 +1,16 @@
 /*
-580.Count Student Number in Departments
 
-A university uses 2 data tables, student and department, to store data about its students and the departments associated with each major.
+580. Count Student Number in Departments -- Medium
+https://leetcode.com/problems/count-student-number-in-departments/
 
-Write a query to print the respective department name and number of students majoring in each department for all departments in the department table (even ones with no current students).
+A university uses 2 data tables, student and department, 
+to store data about its students and the departments associated with each major.
 
-Sort your results by descending number of students; if two or more departments have the same number of students, then sort those departments alphabetically by department name.
+Write a query to print the respective department name and number of students majoring 
+in each department for all departments in the department table (even ones with no current students).
+
+Sort your results by descending number of students; if two or more departments have the same number of students, 
+then sort those departments alphabetically by department name.
 
 The student is described as follow:
 
@@ -15,7 +20,8 @@ The student is described as follow:
 | student_name | String    |
 | gender       | Character |
 | dept_id      | Integer   |
-where student_id is the student's ID number, student_name is the student's name, gender is their gender, and dept_id is the department ID associated with their declared major.
+where student_id is the student's ID number, student_name is the student's name, gender is their gender, 
+and dept_id is the department ID associated with their declared major.
 
 And the department table is described as below:
 
@@ -51,9 +57,9 @@ The Output should be:
 */
 
 # Write your MySQL query statement below
-select dept_name, count(student_id) as student_number
-from department 
-	left join student on (department.dept_id = student.dept_id)
-group by department.dept_name
-order by student_number desc, department.dept_name
+SELECT dept_name, COUNT(student_id) AS student_number 
+FROM department 
+LEFT JOIN student ON department.dept_id=student.dept_id 
+GROUP BY dept_name 
+ORDER BY student_number DESC, dept_name
 ;
