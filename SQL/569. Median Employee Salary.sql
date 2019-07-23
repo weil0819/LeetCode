@@ -41,5 +41,16 @@ Write a SQL query to find the median salary of each company. Bonus points if you
 
 */
 
+# Write your MySQL query statement below
+
+# METHOD-I: group by and then pick up the median one 
+# odd case: #larger == #smaller
+# even case: (#larger - #smaller) = 1
+SELECT * 
+FROM Employee E  
+WHERE ABS((SELECT COUNT(*) FROM Employee E1 WHERE E1.Company=E.Company AND E.Salary>=E1.Salary) 
+          - (SELECT COUNT(*) FROM Employee E2 WHERE E2.Company=E.Company AND E.Salary<=E2.Salary))<=1
+GROUP BY Company,Salary; 
+
 
 
