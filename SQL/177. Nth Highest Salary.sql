@@ -1,5 +1,7 @@
 /*
-177. Nth Highest Salary
+177. Nth Highest Salary -- Easy
+https://leetcode.com/problems/nth-highest-salary/
+
 
 Write a SQL query to get the nth highest salary from the Employee table.
 

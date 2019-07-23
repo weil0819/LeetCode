@@ -1,6 +1,6 @@
 /*
-176. Second Highest Salary
-https://leetcode.com/problems/second-highest-salary/description/
+176. Second Highest Salary -- Easy
+https://leetcode.com/problems/second-highest-salary/
 
 Write a SQL query to get the second highest salary from the Employee table.
 
