@@ -26,4 +26,50 @@ The final answer is guaranteed to be less than 2^31.
 
 */
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+	// Method-I:
+    int rangeSumBST(TreeNode* root, int L, int R) {
+        if(root == NULL) return 0;
+        int res = 0;
+        // Case-I: root is between L and R, root should be included
+        if(root->val >= L && root->val <= R) res += root->val;
+        // Case-II: root is larger than L, find left child
+        if(root->val > L) res += rangeSumBST(root->left, L, R);
+        // Case-III: root is less than R, find right child
+        if(root->val < R) res += rangeSumBST(root->right, L, R);
+        
+        return res;        
+    }
+
+    // Method-II:
+    int rangeSumBST(TreeNode* root, int L, int R) {
+        if(root == NULL) return 0;
+        
+        int res = 0;
+        stack<TreeNode*> S;
+        S.push(root);
+        
+        while(!S.empty()) {
+            TreeNode* node = S.top();
+            S.pop();
+            
+            if(node->val >= L && node->val <= R) res += node->val;
+            if(node->val > L && node->left) S.push(node->left);
+            if(node->val < R && node->right) S.push(node->right);
+        }
+        return res;
+    }
+};
+
+
 
