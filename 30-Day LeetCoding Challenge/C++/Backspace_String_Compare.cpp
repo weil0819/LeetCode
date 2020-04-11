@@ -37,3 +37,10 @@ Can you solve it in O(N) time and O(1) space?
 */
 
 
+class Solution {
+public:
+    bool backspaceCompare(string S, string T) {
+        
+    }
+};
+

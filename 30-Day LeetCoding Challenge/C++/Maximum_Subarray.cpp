@@ -18,8 +18,19 @@ If you have figured out the O(n) solution, try coding another solution using the
 
 class Solution {
 public:
+    // max sum end with nums[i] is the max{nums[i], max sum end with nums[i-1]}
+    // that is, maxSum[i] = max{nums[i], maxSum[i-1]}
     int maxSubArray(vector<int>& nums) {
+        int N = nums.size();
+        if(N == 0) return 0;
         
+        int res = nums[0], maxEnd = nums[0];
+        for(int i = 1; i < N; i++) {
+            maxEnd = max(nums[i], maxEnd + nums[i]);
+            if(maxEnd > res) res = maxEnd;
+        }        
+        
+        return res;
     }
 };
 

@@ -15,4 +15,24 @@ Minimize the total number of operations.
 
 */
 
+class Solution {
+public:
+    // two pointers
+    // one for interation
+    // one for non-zero element
+    void moveZeroes(vector<int>& nums) {
+        int N = nums.size();
+        if(N == 0) return;
+        int p = 0;
+        for(int i = 0; i < N; i++) {
+            if(nums[i] != 0) {
+                nums[p++] = nums[i];
+            }
+        }
+        while(p < N) {
+            nums[p++] = 0;
+        }
+    }
+};
+
 
