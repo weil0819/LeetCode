@@ -1,4 +1,4 @@
-/*
+"""
 Middle of the Linked List
 https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/529/week-2/3290/
 
@@ -26,32 +26,7 @@ Note:
 
 The number of nodes in the given list will be between 1 and 100.
 
-*/
+"""
 
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    // Two pointers: slow and fast
-    // fast moves two steps while slow moves one step
-    // When fast arrives end, slow is in middle
-    ListNode* middleNode(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        
-        // Finally, fast will be END or NULL
-        while(fast != NULL && fast->next != NULL) {
-            fast = fast->next->next;
-            slow = slow->next;
-        }
-        
-        return slow;
-    }
-};
+

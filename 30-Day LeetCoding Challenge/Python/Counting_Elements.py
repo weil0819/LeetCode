@@ -1,4 +1,4 @@
-/*
+"""
 Counting Elements
 https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/
 
@@ -35,28 +35,6 @@ Constraints:
 1 <= arr.length <= 1000
 0 <= arr[i] <= 1000
 
-*/
+"""
 
-
-class Solution {
-public:
-    // Using HashSet to record existing elements
-    // Scanning array and decide it
-    int countElements(vector<int>& arr) {
-        int N = arr.size();
-        if(N == 0) return 0;
-        
-        unordered_set<int> help;
-        int res = 0;
-        for(int i = 0; i < N; i++) {
-            help.insert(arr[i]);
-        }
-        
-        for(int i = 0; i < N; i++) {
-            if(help.find(arr[i]+1) != help.end()) ++res;
-        }
-        
-        return res;
-    }
-};
 

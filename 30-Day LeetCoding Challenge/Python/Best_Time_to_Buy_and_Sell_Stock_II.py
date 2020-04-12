@@ -1,4 +1,4 @@
-/*
+"""
 Best Time to Buy and Sell Stock II
 https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3287/
 
@@ -33,20 +33,6 @@ Constraints:
 1 <= prices.length <= 3 * 10 ^ 4
 0 <= prices[i] <= 10 ^ 4
 
-*/
+"""
 
-class Solution {
-public:
-    // When next price is larger than current price
-    // we can get profit
-    int maxProfit(vector<int>& prices) {
-        int N = prices.size();
-        if(N == 0) return 0;
-        
-        int res = 0;
-        for(int i = 1; i < N; i++) {
-            if(prices[i] > prices[i-1]) res += prices[i]-prices[i-1];
-        }
-        return res;
-    }
-};
+
