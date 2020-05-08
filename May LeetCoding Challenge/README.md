@@ -7,6 +7,13 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 
 
 ### Week 1: May 1st–May 7th
+- First Bad Version
+- Jewels and Stones
+- Ransom Note
+- Number Complement
+- First Unique Character in a String
+- Majority Element
+- Cousins in Binary Tree
 
 ### Week 2: May 8th–May 14th
 
