@@ -16,6 +16,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Cousins in Binary Tree
 
 ### Week 2: May 8th–May 14th
+- Check If It Is a Straight Line
+- Valid Perfect Square
 
 ### Week 3: May 15th–May 21st
 
