@@ -31,9 +31,66 @@ The value of each color in image[i][j] and newColor will be an integer in [0, 65
 
 class Solution {
 public:
+    // BFS method: iterative
+    // color the coordinates first and then push into Queue
+    /*
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        int N = image.size();
+        if(N == 0) return image;
+        int M = image[0].size();
+        if(image[sr][sc] == newColor) return image;
         
+        queue<pair<int, int> > helper;
+        helper.push(make_pair(sr, sc));
+        
+        int color = image[sr][sc];
+        image[sr][sc] = newColor;        
+        
+        while(!helper.empty()) {
+            int x = helper.front().first;
+            int y = helper.front().second;
+            helper.pop();
+            
+            // 4 directions
+            if(x-1 >= 0 && image[x-1][y] == color) {
+                helper.push(make_pair(x-1, y));
+                image[x-1][y] = newColor;
+            }
+            if(x+1 < N && image[x+1][y] == color) {
+                helper.push(make_pair(x+1, y));
+                image[x+1][y] = newColor;
+            }
+            if(y-1 >= 0 && image[x][y-1] == color) {
+                helper.push(make_pair(x, y-1));
+                image[x][y-1] = newColor;
+            }
+            if(y+1 < M && image[x][y+1] == color) {
+                helper.push(make_pair(x, y+1));
+                image[x][y+1] = newColor;
+            }            
+        }
+        return image;        
     }
+    */
+    
+    //DFS method: recursive
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        if(image[sr][sc] != newColor) {
+            DFSUtil(image, sr, sc, image[sr][sc], newColor);
+        }
+        return image;
+    }
+    
+private:
+    void DFSUtil(vector<vector<int> >& image, int x, int y, int color, int newColor) {
+        if(x < 0 || x >= image.size() || y < 0 || y >= image[0].size() || image[x][y] != color) return ;
+        image[x][y] = newColor;
+        DFSUtil(image, x-1, y, color, newColor);
+        DFSUtil(image, x+1, y, color, newColor);
+        DFSUtil(image, x, y-1, color, newColor);
+        DFSUtil(image, x, y+1, color, newColor);
+    }
+    
 };
 
 
