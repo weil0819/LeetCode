@@ -18,6 +18,11 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 ### Week 2: May 8th–May 14th
 - Check If It Is a Straight Line
 - Valid Perfect Square
+- Find the Town Judge  
+- Flood Fill  
+- Single Element in a Sorted Array  
+- Remove K Digits  
+- Implement Trie (Prefix Tree)
 
 ### Week 3: May 15th–May 21st
 
