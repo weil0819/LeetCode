@@ -25,6 +25,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Implement Trie (Prefix Tree)
 
 ### Week 3: May 15th–May 21st
+- Maximum Sum Circular Subarray
 
 ### Week 4: May 22nd–May 28th
 

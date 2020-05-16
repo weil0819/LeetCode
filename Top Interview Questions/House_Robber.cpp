@@ -1,0 +1,66 @@
+/*
+House Robber
+https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/576/
+
+@date: May 15, 2020
+
+You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+
+Example 1:
+
+Input: [1,2,3,1]
+Output: 4
+Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+             Total amount you can rob = 1 + 3 = 4.
+Example 2:
+
+Input: [2,7,9,3,1]
+Output: 12
+Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
+             Total amount you can rob = 2 + 9 + 1 = 12.
+
+*/
+
+
+class Solution {
+public:
+    // DP problem
+    // dp[i][0] represents we don't rob house i
+    // dp[i][1] represents we rob house i
+    // When we rob house i, we can't rob i-1, so dp[i][1] = nums[i] + dp[i][0]
+    // Else we can either rob or not rob i-1, so dp[i][0] = max(dp[i-1][0], dp[i-1][1])
+    /*
+    int rob(vector<int>& nums) {
+        int N = nums.size();
+        if(N == 0) return 0;
+        vector<vector<int> > dp(N, vector<int>(2));
+        dp[0][0] = 0;
+        dp[0][1] = nums[0];
+        for(int i = 1; i < N; i++) {
+            dp[i][0] = max(dp[i-1][0], dp[i-1][1]);
+            dp[i][1] = nums[i] + dp[i-1][0];
+        }
+        return max(dp[N-1][0], dp[N-1][1]);
+    }
+    */
+    
+    // DP array can be converted into O(1) space
+    int rob(vector<int>& nums) {
+        int N = nums.size();
+        if(N == 0) return 0;
+        int robYes = nums[0];
+        int robNo = 0;
+        for(int i = 1; i < N; i++) {
+            int temp = robNo;
+            robNo = max(robNo, robYes);
+            robYes = nums[i] + temp;
+        }
+        
+        return max(robYes, robNo);
+    }
+};
+
+
+
