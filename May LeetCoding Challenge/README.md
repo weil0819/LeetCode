@@ -26,6 +26,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 
 ### Week 3: May 15th–May 21st
 - Maximum Sum Circular Subarray
+- Odd Even Linked List
+- Find All Anagrams in a String
 
 ### Week 4: May 22nd–May 28th
 
