@@ -40,13 +40,22 @@ The total time limit for this problem has been reduced by 75% for C++, and 50% f
 
 
 class StockSpanner {
+private:
+    stack<pair<int, int> > helper;      // <price, span>
+    
 public:
     StockSpanner() {
         
     }
     
     int next(int price) {
-        
+        int span = 1;
+        while(!helper.empty() && price >= helper.top().first) {
+            span += helper.top().second;
+            helper.pop();
+        }
+        helper.push(make_pair(price, span));
+        return span;
     }
 };
 
@@ -55,6 +64,5 @@ public:
  * StockSpanner* obj = new StockSpanner();
  * int param_1 = obj->next(price);
  */
-
 
 
