@@ -30,6 +30,9 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Find All Anagrams in a String
 - Permutation in String
 - Online Stock Span  
+- Kth Smallest Element in a BST
+- Count Square Submatrices with All Ones
+- Sort Characters By Frequency
 
 
 ### Week 4: May 22nd–May 28th
