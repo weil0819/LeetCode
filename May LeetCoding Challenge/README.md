@@ -33,6 +33,11 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Kth Smallest Element in a BST
 - Count Square Submatrices with All Ones
 - Sort Characters By Frequency
+- Interval List Intersections
+- Construct Binary Search Tree from Preorder Traversal
+- Uncrossed Lines
+- Contiguous Array
+- Possible Bipartition
 
 
 ### Week 4: May 22nd–May 28th
