@@ -38,6 +38,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Uncrossed Lines
 - Contiguous Array
 - Possible Bipartition
+- Counting Bits
 
 
 ### Week 4: May 22nd–May 28th
