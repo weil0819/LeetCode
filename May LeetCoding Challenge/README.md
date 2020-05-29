@@ -32,6 +32,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Online Stock Span  
 - Kth Smallest Element in a BST
 - Count Square Submatrices with All Ones
+
+### Week 4: May 22nd–May 28th
 - Sort Characters By Frequency
 - Interval List Intersections
 - Construct Binary Search Tree from Preorder Traversal
@@ -40,9 +42,6 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Possible Bipartition
 - Counting Bits
 
-
-### Week 4: May 22nd–May 28th
-
 ### Week 5: May 29th–May 31st
-
+- Course Schedule
 
