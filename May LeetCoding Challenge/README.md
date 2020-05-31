@@ -44,4 +44,6 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 
 ### Week 5: May 29th–May 31st
 - Course Schedule
+- K Closest Points to Origin
+- Edit Distance
 
