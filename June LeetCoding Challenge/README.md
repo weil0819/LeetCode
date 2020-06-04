@@ -8,5 +8,5 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 ### Week 1: June 1st–June 7th 
 - Invert Binary Tree
 - Delete Node in a Linked List
-
+- Two City Scheduling
 
