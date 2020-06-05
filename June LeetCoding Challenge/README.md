@@ -9,4 +9,6 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Invert Binary Tree
 - Delete Node in a Linked List
 - Two City Scheduling
+- Reverse String
+- Random Pick with Weight
 
