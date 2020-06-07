@@ -12,3 +12,4 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Reverse String
 - Random Pick with Weight
 - Queue Reconstruction by Height
+- Coin Change 2
