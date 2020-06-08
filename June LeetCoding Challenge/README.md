@@ -13,3 +13,4 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Random Pick with Weight
 - Queue Reconstruction by Height
 - Coin Change 2
+- Power of Two
