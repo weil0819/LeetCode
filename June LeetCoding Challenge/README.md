@@ -14,3 +14,4 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Queue Reconstruction by Height
 - Coin Change 2
 - Power of Two
+- Is Subsequence
