@@ -15,3 +15,4 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Coin Change 2
 - Power of Two
 - Is Subsequence
+- Search Insert Position
