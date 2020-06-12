@@ -16,3 +16,4 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Power of Two
 - Is Subsequence
 - Search Insert Position
+- Sort Colors
