@@ -18,4 +18,6 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Search Insert Position
 - Sort Colors
 - Insert Delete GetRandom O(1)
-- Largest Divisible Subset
+- Largest Divisible Subset 
+- Cheapest Flights Within K Stops 
+- Search in a Binary Search Tree
