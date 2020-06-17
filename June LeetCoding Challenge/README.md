@@ -21,3 +21,5 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Largest Divisible Subset 
 - Cheapest Flights Within K Stops 
 - Search in a Binary Search Tree
+- Validate IP Address
+- Surrounded Regions
