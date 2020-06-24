@@ -13,6 +13,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Random Pick with Weight
 - Queue Reconstruction by Height
 - Coin Change 2
+
+### Week 2: June 8th–June 14th
 - Power of Two
 - Is Subsequence
 - Search Insert Position
@@ -20,6 +22,19 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Insert Delete GetRandom O(1)
 - Largest Divisible Subset 
 - Cheapest Flights Within K Stops 
+
+### Week 3: June 15th–June 21st
 - Search in a Binary Search Tree
 - Validate IP Address
 - Surrounded Regions
+- H-Index II
+- Longest Duplicate Substring
+- Permutation Sequence
+- Dungeon Game
+
+### Week 4: June 22nd–June 28th
+- Single Number II
+- Count Complete Tree Nodes
+
+### Week 5: June 29th–June 30th
+
