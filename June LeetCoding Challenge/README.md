@@ -35,6 +35,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 ### Week 4: June 22nd–June 28th
 - Single Number II
 - Count Complete Tree Nodes
+- Unique Binary Search Trees
+- Find the Duplicate Number
 
 ### Week 5: June 29th–June 30th
 
