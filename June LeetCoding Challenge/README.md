@@ -37,6 +37,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Count Complete Tree Nodes
 - Unique Binary Search Trees
 - Find the Duplicate Number
+- Sum Root to Leaf Numbers
+- Perfect Squares
 
 ### Week 5: June 29th–June 30th
 
