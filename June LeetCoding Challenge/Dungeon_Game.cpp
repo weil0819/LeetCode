@@ -31,8 +31,26 @@ Any room can contain threats or power-ups, even the first room the knight enters
 
 class Solution {
 public:
+    // DP problem
+    // dp[i][j] = minimum health can arrive (i, j)
+    // Starting from (N-1, M-1)
+    // dp[i][j] = min(dp[i-1][j], dp[i][j-1]) - dungeon[i][j]
     int calculateMinimumHP(vector<vector<int>>& dungeon) {
+        int N = dungeon.size();
+        if(N == 0) return 0;
+        int M = dungeon[0].size();
         
+        vector<vector<int> > dp(N+1, vector<int>(M+1, INT_MAX));
+        dp[N][M-1] = 1;       // last value should be 1
+        dp[N-1][M] = 1;
+        for(int i = N-1; i >= 0; i--) {
+            for(int j = M-1; j >= 0; j--) {
+                int need = min(dp[i+1][j], dp[i][j+1]) - dungeon[i][j];
+                dp[i][j] = need <= 0 ? 1 : need;
+            }
+        }
+        
+        return dp[0][0];
     }
 };
 

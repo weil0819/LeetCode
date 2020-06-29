@@ -39,6 +39,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - Find the Duplicate Number
 - Sum Root to Leaf Numbers
 - Perfect Squares
+- Reconstruct Itinerary
 
 ### Week 5: June 29th–June 30th
-
+- Unique Paths
+- 
