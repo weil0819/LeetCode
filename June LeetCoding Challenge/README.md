@@ -43,4 +43,4 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 
 ### Week 5: June 29th–June 30th
 - Unique Paths
-- 
+- Word Search II
