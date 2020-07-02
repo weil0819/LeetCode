@@ -63,12 +63,17 @@ We recommend: Climbing Stairs, Best Time to Buy and Sell Stock and Maximum Subar
 These problems may require you to implement a given interface of a class, and may involve using one or more data structures. These are great exercises to improve your data structure skills.
 
 We recommend: Shuffle an Array and Min Stack.  
-
+- [x] Shuffle an Array
+- [x] Min Stack
 
 ### Math
 Most of the math questions asked in interviews do not require math knowledge beyond middle school level.
 
 We recommend: Count Primes and Power of Three.  
+- [x] Fizz Buzz
+- [x] Count Primes
+- [x] Power of Three
+- [x] Roman to Integer
 
 
 ### Others
