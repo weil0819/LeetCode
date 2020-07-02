@@ -7,7 +7,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 
 ### Week 1: July 1st - July 7th
 - Arranging Coins
-
+- Binary Tree Level Order Traversal II
 
 ### Week 2: July 8th - July 14th
 
