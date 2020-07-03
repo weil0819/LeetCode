@@ -80,4 +80,10 @@ We recommend: Count Primes and Power of Three.
 Here are some other questions that do not fit in other categories.
 
 We recommend: Number of 1 Bits and Valid Parentheses. 
+- [x] Number of 1 Bits
+- [x] Hamming Distance
+- [] Reverse Bits
+- [] Pascal's Triangle
+- [] Valid Parentheses
+- [] Missing Number
 
