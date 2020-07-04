@@ -9,6 +9,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] Arranging Coins
 - [x] Binary Tree Level Order Traversal II
 - [x] Prison Cells After N Days
+- [x] Ugly Number II
 
 ### Week 2: July 8th - July 14th
 
