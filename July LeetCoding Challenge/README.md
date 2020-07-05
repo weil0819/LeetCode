@@ -10,6 +10,8 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] Binary Tree Level Order Traversal II
 - [x] Prison Cells After N Days
 - [x] Ugly Number II
+- [x] Hamming Distance
+
 
 ### Week 2: July 8th - July 14th
 
