@@ -11,6 +11,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] Prison Cells After N Days
 - [x] Ugly Number II
 - [x] Hamming Distance
+- [x] Plus One
 
 
 ### Week 2: July 8th - July 14th
