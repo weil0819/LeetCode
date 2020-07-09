@@ -13,11 +13,11 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] Hamming Distance
 - [x] Plus One
 - [x] Island Perimeter
-- [x] 3Sum
 
 
 ### Week 2: July 8th - July 14th
-
+- [x] 3Sum
+- [x] Maximum Width of Binary Tree
 
 ### Week 3: July 15th - July 21st
 
