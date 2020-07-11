@@ -18,6 +18,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 ### Week 2: July 8th - July 14th
 - [x] 3Sum
 - [x] Maximum Width of Binary Tree
+- [x] Flatten a Multilevel Doubly Linked List
 
 ### Week 3: July 15th - July 21st
 
