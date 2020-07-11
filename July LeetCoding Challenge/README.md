@@ -19,6 +19,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] 3Sum
 - [x] Maximum Width of Binary Tree
 - [x] Flatten a Multilevel Doubly Linked List
+- [x] Subsets
 
 ### Week 3: July 15th - July 21st
 

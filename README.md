@@ -26,6 +26,7 @@
 - Stack
 - Two Pointers
 - SQL
+- [] Backtracking
 
 
 ## Companies:
