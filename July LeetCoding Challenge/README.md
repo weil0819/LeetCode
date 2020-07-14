@@ -22,6 +22,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] Subsets
 - [x] Reverse Bits
 - [x] Same Tree
+- [x] Angle Between Hands of a Clock
 
 
 ### Week 3: July 15th - July 21st
