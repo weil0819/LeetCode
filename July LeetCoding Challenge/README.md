@@ -28,7 +28,10 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 ### Week 3: July 15th - July 21st
 - [x] Reverse Words in a String
 - [x] Pow(x, n)
-- [] Top K Frequent Elements
+- [x] Top K Frequent Elements
+- [] Course Schedule II
+- [x] Add Binary
+- [x] Remove Linked List Elements
 
 
 ### Week 4: July 22nd - July 28th

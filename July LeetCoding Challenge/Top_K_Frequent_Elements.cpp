@@ -24,7 +24,28 @@ You can return the answer in any order.
 
 class Solution {
 public:
+    // Hashmap + Bucket Sort
     vector<int> topKFrequent(vector<int>& nums, int k) {
+        vector<int> res;
+        int N = nums.size();
+        if(N == 0) return res;
+        unordered_map<int, int> helper;
+        for(int i = 0; i < N; i++) {
+            ++helper[nums[i]];
+        }
         
+        vector<vector<int> > bucket(N+1);
+        for(auto p: helper) {
+            int num = p.second;
+            bucket[num].push_back(p.first);
+        }
+        
+        for(int i = N; i >= 0; i--) {
+            for(int j = 0; j < bucket[i].size(); j++) {
+                res.push_back(bucket[i][j]);
+                if(res.size() == k) return res;
+            }
+        }
+        return res;
     }
 };
