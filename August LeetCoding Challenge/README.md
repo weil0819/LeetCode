@@ -10,5 +10,5 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [x] Detect Capital
 - [x] Design HashSet
 - [x] Valid Palindrome
-
+- [x] Power of Four
 
