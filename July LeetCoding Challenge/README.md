@@ -32,7 +32,7 @@ This Challenge is beginner-friendly and available to both Premium and non-Premiu
 - [] Course Schedule II
 - [x] Add Binary
 - [x] Remove Linked List Elements
-
+- [x] Word Search
 
 ### Week 4: July 22nd - July 28th
 
