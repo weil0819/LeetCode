@@ -2,14 +2,17 @@
 
 ### Array
 ```c++
-// 1. Initialize
+#include <iostream>
+
+int main() {
+    // 1. Initialize
     int a0[5];
     int a1[5] = {1, 2, 3};  // other element will be set as the default value
     // 2. Get Length
     int size = sizeof(a1) / sizeof(*a1);
-    cout << "The size of a1 is: " << size << endl;  // 5
+    cout << "The size of a1 is: " << size << endl;
     // 3. Access Element
-    cout << "The first element is: " << a1[0] << endl;  // 1
+    cout << "The first element is: " << a1[0] << endl;
     // 4. Iterate all Elements
     cout << "[Version 1] The contents of a1 are:";
     for (int i = 0; i < size; ++i) {
@@ -25,16 +28,19 @@
     a1[0] = 4;
     // 6. Sort
     sort(a1, a1 + size);
-
+}
 ```
 
 
 ```java
-// 1. Initialize
+// "static void main" must be defined in a public class.
+public class Main {
+    public static void main(String[] args) {
+        // 1. Initialize
         int[] a0 = new int[5];
         int[] a1 = {1, 2, 3};
         // 2. Get Length
-        System.out.println("The size of a1 is: " + a1.length);  // 5
+        System.out.println("The size of a1 is: " + a1.length);
         // 3. Access Element
         System.out.println("The first element is: " + a1[0]);
         // 4. Iterate all Elements
@@ -52,11 +58,16 @@
         a1[0] = 4;
         // 6. Sort
         Arrays.sort(a1);
+    }
+}
 ```
 
 ### Dynamic Array
 ```c++
-// 1. initialize
+#include <iostream>
+
+int main() {
+    // 1. initialize
     vector<int> v0;
     vector<int> v1(5, 0);
     // 2. make a copy
@@ -93,10 +104,14 @@
     v4.push_back(-1);
     // 9. delete the last element
     v4.pop_back();
+}
 ```
 
 ```java
-// 1. initialize
+// "static void main" must be defined in a public class.
+public class Main {
+    public static void main(String[] args) {
+        // 1. initialize
         List<Integer> v0 = new ArrayList<>();
         List<Integer> v1;                           // v1 == null
         // 2. cast an array to a vector
@@ -132,6 +147,113 @@
         v1.add(1, 6);
         // 9. delete the last element
         v1.remove(v1.size() - 1);
+    }
+}
 ```
 
+### 2D Array
+
+```c++
+#include <iostream>
+
+template <size_t n, size_t m>
+void printArray(int (&a)[n][m]) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    cout << "Example I:" << endl;
+    int a[2][5];
+    // 2495072 0 1 0 1187757920
+    // 32764 3891941 0 54610656 0 
+    printArray(a);   
+    cout << "Example II:" << endl;
+    int b[2][5] = {{1, 2, 3}};
+    // 1 2 3 0 0
+    // 0 0 0 0 0 
+    printArray(b);
+    cout << "Example III:"<< endl;
+    int c[][5] = {1, 2, 3, 4, 5, 6, 7};
+    // 1 2 3 4 5 
+    // 6 7 0 0 0
+    printArray(c);
+    cout << "Example IV:" << endl;
+    int d[][5] = {{1, 2, 3, 4}, {5, 6}, {7}};
+    // 1 2 3 4 0 
+    // 5 6 0 0 0 
+    // 7 0 0 0 0 
+    printArray(d);
+}
+```
+
+```java
+// "static void main" must be defined in a public class.
+public class Main {
+    private static void printArray(int[][] a) {
+        for (int i = 0; i < a.length; ++i) {
+            System.out.println(a[i]);
+        }
+        for (int i = 0; i < a.length; ++i) {
+            for (int j = 0; a[i] != null && j < a[i].length; ++j) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Example I:");
+        int[][] a = new int[2][5];
+        // [I@4a574795
+        // [I@f6f4d33
+        // 0 0 0 0 0 
+        // 0 0 0 0 0 
+        printArray(a);
+        System.out.println("Example II:");
+        int[][] b = new int[2][];
+        // null
+        // null
+        printArray(b);
+        System.out.println("Example III:");
+        b[0] = new int[3];
+        b[1] = new int[5];
+        // [I@38af3868
+        // [I@77459877
+        // 0 0 0 
+        // 0 0 0 0 0 
+        printArray(b);
+    }
+}
+```
+
+### String Compare Function
+```c++
+
+```
+
+```java
+
+```
+
+### String Immutable or Mutable
+```c++
+
+```
+
+```java
+
+```
+
+### String Extra Operations
+```c++
+
+```
+
+```java
+
+```
 
